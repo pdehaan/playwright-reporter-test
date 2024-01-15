@@ -1,0 +1,832 @@
+{
+  "config": {
+    "configFile": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/playwright.config.js",
+    "rootDir": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 5
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      ["html", null],
+      [
+        "json",
+        {
+          "outputFile": "report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/test-results",
+        "repeatEach": 1,
+        "retries": 5,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests",
+        "testIgnore": [],
+        "testMatch": ["**/*.@(spec|test).?(c|m)[jt]s?(x)"],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/test-results",
+        "repeatEach": 1,
+        "retries": 5,
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests",
+        "testIgnore": [],
+        "testMatch": ["**/*.@(spec|test).?(c|m)[jt]s?(x)"],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.40.1",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "example.spec.js",
+      "file": "example.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "has title with failure",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 270000,
+              "annotations": [
+                {
+                  "type": "slow",
+                  "description": "very slow beforehook"
+                },
+                {
+                  "type": "slow",
+                  "description": "very slow test"
+                },
+                {
+                  "type": "issue",
+                  "description": "Blocked on FXA-5555"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 5586,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22",
+                    "location": {
+                      "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                      "column": 22,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                        "column": 22,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-15T00:09:19.306Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                    "column": 22,
+                    "line": 17
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "status": "failed",
+                  "duration": 5555,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22",
+                    "location": {
+                      "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                      "column": 22,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                        "column": 22,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2024-01-15T00:09:25.256Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/test-results/example-has-title-with-failure-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                    "column": 22,
+                    "line": 17
+                  }
+                },
+                {
+                  "workerIndex": 6,
+                  "status": "failed",
+                  "duration": 5538,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22",
+                    "location": {
+                      "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                      "column": 22,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                        "column": 22,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2024-01-15T00:09:31.003Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                    "column": 22,
+                    "line": 17
+                  }
+                },
+                {
+                  "workerIndex": 8,
+                  "status": "failed",
+                  "duration": 5475,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22",
+                    "location": {
+                      "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                      "column": 22,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                        "column": 22,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-rh=\"…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 3,
+                  "startTime": "2024-01-15T00:09:36.928Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                    "column": 22,
+                    "line": 17
+                  }
+                },
+                {
+                  "workerIndex": 10,
+                  "status": "failed",
+                  "duration": 5490,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22",
+                    "location": {
+                      "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                      "column": 22,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                        "column": 22,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 4,
+                  "startTime": "2024-01-15T00:09:42.764Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                    "column": 22,
+                    "line": 17
+                  }
+                },
+                {
+                  "workerIndex": 12,
+                  "status": "failed",
+                  "duration": 5479,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22",
+                    "location": {
+                      "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                      "column": 22,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                        "column": 22,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 5,
+                  "startTime": "2024-01-15T00:09:48.611Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                    "column": 22,
+                    "line": 17
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dd9b2edffe9b7501040c-a1475c60b0cf3902b5c9",
+          "file": "example.spec.js",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "has title",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 270000,
+              "annotations": [
+                {
+                  "type": "slow",
+                  "description": "very slow beforehook"
+                },
+                {
+                  "type": "slow",
+                  "description": "very slow test"
+                },
+                {
+                  "type": "issue",
+                  "description": "Blocked on FXA-5555"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 642,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-15T00:09:19.313Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dd9b2edffe9b7501040c-fe3fbe2603922999b144",
+          "file": "example.spec.js",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "has title flaky",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 270000,
+              "annotations": [
+                {
+                  "type": "slow",
+                  "description": "very slow beforehook"
+                },
+                {
+                  "type": "slow",
+                  "description": "very slow test"
+                },
+                {
+                  "type": "issue",
+                  "description": "Blocked on FXA-5555"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 557,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-15T00:09:19.305Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dd9b2edffe9b7501040c-a286a061954587541b26",
+          "file": "example.spec.js",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "get started link",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-15T00:09:19.113Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "dd9b2edffe9b7501040c-18206e4c4b88f5cba6b3",
+          "file": "example.spec.js",
+          "line": 48,
+          "column": 6
+        },
+        {
+          "title": "has title with failure",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 270000,
+              "annotations": [
+                {
+                  "type": "slow",
+                  "description": "very slow beforehook"
+                },
+                {
+                  "type": "slow",
+                  "description": "very slow test"
+                },
+                {
+                  "type": "issue",
+                  "description": "Blocked on FXA-5555"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "failed",
+                  "duration": 6154,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22",
+                    "location": {
+                      "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                      "column": 22,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                        "column": 22,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-15T00:09:19.307Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                    "column": 22,
+                    "line": 17
+                  }
+                },
+                {
+                  "workerIndex": 4,
+                  "status": "failed",
+                  "duration": 5818,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22",
+                    "location": {
+                      "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                      "column": 22,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                        "column": 22,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2024-01-15T00:09:26.374Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/test-results/example-has-title-with-failure-firefox-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                    "column": 22,
+                    "line": 17
+                  }
+                },
+                {
+                  "workerIndex": 7,
+                  "status": "failed",
+                  "duration": 5774,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22",
+                    "location": {
+                      "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                      "column": 22,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                        "column": 22,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2024-01-15T00:09:32.634Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                    "column": 22,
+                    "line": 17
+                  }
+                },
+                {
+                  "workerIndex": 9,
+                  "status": "failed",
+                  "duration": 5837,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22",
+                    "location": {
+                      "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                      "column": 22,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                        "column": 22,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 3,
+                  "startTime": "2024-01-15T00:09:39.297Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                    "column": 22,
+                    "line": 17
+                  }
+                },
+                {
+                  "workerIndex": 11,
+                  "status": "failed",
+                  "duration": 5946,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22",
+                    "location": {
+                      "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                      "column": 22,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                        "column": 22,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 4,
+                  "startTime": "2024-01-15T00:09:46.035Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                    "column": 22,
+                    "line": 17
+                  }
+                },
+                {
+                  "workerIndex": 13,
+                  "status": "failed",
+                  "duration": 5772,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22",
+                    "location": {
+                      "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                      "column": 22,
+                      "line": 17
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                        "column": 22,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/expected failure/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveTitle with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\" dir=\"ltr\" data-theme=\"light\" data-has-…>…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/expected failure/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m test(\u001b[32m'has title'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js:17:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 5,
+                  "startTime": "2024-01-15T00:09:53.012Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/Volumes/Dev/github/pdehaan/playwright-reporter-test/tests/example.spec.js",
+                    "column": 22,
+                    "line": 17
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dd9b2edffe9b7501040c-ea777e2221af72967499",
+          "file": "example.spec.js",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "has title",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 270000,
+              "annotations": [
+                {
+                  "type": "slow",
+                  "description": "very slow beforehook"
+                },
+                {
+                  "type": "slow",
+                  "description": "very slow test"
+                },
+                {
+                  "type": "issue",
+                  "description": "Blocked on FXA-5555"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "passed",
+                  "duration": 1210,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-15T00:09:19.304Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dd9b2edffe9b7501040c-d4c717b31af4a9f2966c",
+          "file": "example.spec.js",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "has title flaky",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 270000,
+              "annotations": [
+                {
+                  "type": "slow",
+                  "description": "very slow beforehook"
+                },
+                {
+                  "type": "slow",
+                  "description": "very slow test"
+                },
+                {
+                  "type": "issue",
+                  "description": "Blocked on FXA-5555"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "status": "passed",
+                  "duration": 863,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-15T00:09:20.721Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dd9b2edffe9b7501040c-d28cc15b590404cc9090",
+          "file": "example.spec.js",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "get started link",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-15T00:09:20.286Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "dd9b2edffe9b7501040c-bd27acb1ede64c49a8c2",
+          "file": "example.spec.js",
+          "line": 48,
+          "column": 6
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-01-15T00:09:19.102Z",
+    "duration": 40399.005,
+    "expected": 4,
+    "skipped": 2,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}
